@@ -1,0 +1,52 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+body{
+  margin: 0; padding: 0; background-color: rgb(255, 219, 184);
+  width: 100vw; overflow: hidden;
+}
+
+.navbar{
+  background: linear-gradient(to right, rgb(255, 145, 0), red); color: white;
+  padding: 8px 25px; display: flex; justify-content: space-between; 
+}
+.navbar .link{
+  color: white; text-decoration: none;
+}
+
+.navbar .btn .link{
+  color: white; text-decoration: none;
+}
+
+.navbar .subNav{
+  display: flex; align-items: center; gap: 18px;
+}
+
+.navbar .btn{
+  background:transparent; outline: none; border: none;
+  padding: 10px; font-size: large; height: 100%;
+}
+
+table, tr, th, td{
+  border: 1px solid black; border-collapse: collapse; text-align: center; font-size: large;
+}
+table{ width: 80%; margin: auto;}
+
+.subSpan{ font-size: 25px; margin: 0px 10px;}
+
+.reciepeForm{
+  font-size: larger;
+}
+
+.tr{
+  background-color: rgb(255, 131, 86);
+}
+
+.svg > span{
+  display: none;
+}
+.svg:hover > span{
+  display: inline-block;
+}
