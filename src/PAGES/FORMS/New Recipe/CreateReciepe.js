@@ -11,6 +11,7 @@ export const CreateReciepe = () => {
   const [itemNm, setItemNm] = useState("");
   const [quantity, setQuantity] = useState("");
   const [weight, setWeight] = useState("");
+  const [price, setPrice] = useState("");
 
   const [err, setErr] = useState("");
   const navigate = useNavigate();
@@ -34,12 +35,12 @@ export const CreateReciepe = () => {
 
   const handleSUbmit = async (e) => {
     e.preventDefault();
-    if (!itemNm || !quantity || !weight) {
+    if (!itemNm || !quantity || !weight || !price) {
       setErr("Please fill all fields.");  //VALIDATION
       return;
     }
     try {
-      const newItem = { reciepeNm, itemNm, quantity, weight };
+      const newItem = { reciepeNm, itemNm, quantity, weight, price };
       console.log(newItem)
       await createRecipe(newItem);  //POST req to add new items to crtRcp DataBase
       navigate("/adminHome");
@@ -50,12 +51,12 @@ export const CreateReciepe = () => {
 
   const AddToDB = async (e) => {
     e.preventDefault();
-    if (!itemNm || !quantity || !weight) {
+    if (!itemNm || !quantity || !weight || !price) {
       setErr("Please fill all fields.");  //VALIDATION
       return;
     }
     try {
-      const newItem = { reciepeNm, itemNm, quantity, weight };
+      const newItem = { reciepeNm, itemNm, quantity, weight, price };
       setArray([...array, newItem]);
       await createRecipe(newItem);  //POST req to add new items to crtRcp DataBase
       //Set all the fields empty again
@@ -139,6 +140,17 @@ export const CreateReciepe = () => {
               value={quantity}
               placeholder="Enter quantity of required item..."
               onChange={(e) => setQuantity(e.target.value)}
+            />
+          </div>
+          <div className="my-2">
+            <label>Price: </label>
+            <input
+              className="w-full rounded-lg text-lg focus:border-b-2 border-orange-600 outline-none p-2 bg-orange-200 my-1"
+              type="number"
+              name="quantity"
+              value={price}
+              placeholder="Enter quantity of required item..."
+              onChange={(e) => setPrice(e.target.value)}
             />
           </div>
           

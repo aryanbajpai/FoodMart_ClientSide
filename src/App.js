@@ -14,6 +14,7 @@ import { AddUpdtRecipe } from './PAGES/FORMS/AddUpdtRecipe';
 import { UpdtRecipe } from './PAGES/FORMS/Old Recipe/UpdtRecipe';
 import { OldRecipeUpdt } from './PAGES/FORMS/Old Recipe/OldRecipeUpdt';
 import {ViewRecipe} from './PAGES/HomePage/ViewRecipe';
+import { MngrHomePg } from './PAGES/HomePage/MngrHomePg';
 
 function App() {
 
@@ -53,6 +54,7 @@ function App() {
         <Routes >
           <Route exact path='/' element={<HomePage />} />
           <Route exact path='/adminHome' element={<AdminHome />} />
+          <Route exact path='/mngrHome' element={<MngrHomePg />} />
           <Route exact path='/adminLog' element={<AdminLogin />} />
           <Route path='/managerLog' element={<ManagerLogin />} />
           <Route path='/addvendor' element={<AddVendors />} />

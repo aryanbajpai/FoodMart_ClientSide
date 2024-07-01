@@ -1,11 +1,13 @@
 import React, { useState } from 'react'
 import mAnAger from '../../IMAGES/manager.png';
+import { useNavigate } from 'react-router-dom';
 
 export const ManagerLogin = () => {
+  const navigate = useNavigate();
 
     const dummyData = {
-        "username": "Mngr01",
-        "password": "Manager"
+        "username": "mngr001",
+        "password": "Mngr001"
     }
 
     const [username, setUsername] = useState('');
@@ -16,7 +18,7 @@ export const ManagerLogin = () => {
         e.preventDefault();
 
         if(username===dummyData.username && password===dummyData.password){
-            alert(`${username} Logged successfully..`);
+            navigate('/mngrHome')
         } else {
             setError('Invalid Username or Password');
         }
