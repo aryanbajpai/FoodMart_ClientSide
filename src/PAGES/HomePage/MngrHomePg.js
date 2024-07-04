@@ -57,8 +57,6 @@ export const MngrHomePg = () => {
     setOrderData(updatedOrderData);
   };
 
-  console.log(orderData);
-
   return (
     <div className="flex">
       {/*All RECIPES*/}
@@ -90,7 +88,6 @@ export const MngrHomePg = () => {
                 {match.recipe.reciepeNm}
               </h2>
               <div className="flex-[45%] text-[25px]  text-center ">
-                <div className="text-xl ">Ingredients:</div>
                 <ul className="text-lg px-2">
                   {match.items.map((item, idx) => (
                     <li key={idx}>
@@ -172,7 +169,7 @@ export const MngrHomePg = () => {
                   strokeWidth="1.5"
                   stroke="currentColor"
                   onClick={del}
-                  className="absolute right-0 hover:bg-red-600 hover:text-white w-10 h-10 p-2 rounded-full hover:cursor-pointer bg-black text-red-600"
+                  className="absolute right-0 border border-black hover:bg-red-600 hover:text-white w-10 h-10 p-2 rounded-full hover:cursor-pointer bg-gray-300 text-red-600"
                 >
                   <path
                     strokeLinecap="round"
